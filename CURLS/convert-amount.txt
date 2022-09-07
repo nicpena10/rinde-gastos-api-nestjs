@@ -1,0 +1,1 @@
+curl --location --request GET 'localhost:3000/convert-amount/CLP/EUR/15000/d85c3260efe7428395c37ffb00fa3c0f'

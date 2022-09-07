@@ -1,0 +1,2 @@
+curl --location --request GET 'localhost:3000/getthenumber/192/3' \
+--data-raw ''

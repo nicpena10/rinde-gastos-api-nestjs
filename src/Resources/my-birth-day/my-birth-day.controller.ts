@@ -1,4 +1,5 @@
-import { Controller, Get, Param } from '@nestjs/common';
+import { Body, Controller, Get, Param, ParseArrayPipe, ParseUUIDPipe } from '@nestjs/common';
+import { MyBirthDayDTO } from './my-birth-dat.dto';
 import { MyBirthDayService } from './my-birth-day.service';
 
 @Controller('my-birth-day')
@@ -8,8 +9,9 @@ export class MyBirthDayController {
 
     }
 
-    @Get(':birthdate')
-    getDaysUntilMyBirthday(@Param('birthdate') birthdate:string){
-        return this.My_Birth_Day_Service.getDaysUntilMyBirthday(birthdate);
+    @Get('/birthdate')
+    getDaysUntilMyBirthday(@Body() params:MyBirthDayDTO){
+        
+        return this.My_Birth_Day_Service.getDaysUntilMyBirthday(params);
     }
 }

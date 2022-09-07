@@ -1,2 +1,7 @@
-curl --location --request GET 'localhost:3000/my-birth-day/13-02' \
---data-raw ''
+curl --location --request GET 'localhost:3000/my-birth-day/birthdate' \
+--header 'Content-Type: application/json' \
+--data-raw '
+    {
+        "birthdate":"13-02"
+    }
+'

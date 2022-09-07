@@ -1,1 +1,12 @@
-curl --location --request GET 'localhost:3000/convert-amount/CLP/EUR/15000/d85c3260efe7428395c37ffb00fa3c0f'
+curl --location --request GET 'localhost:3000/convert-amount/GetConvertAmount' \
+--header 'Content-Type: application/json' \
+--data-raw '{  
+   "amount":15000,
+   "from" : "CLP",
+   "to" : "EUR",
+   "app_id" : "d85c3260efe7428395c37ffb00fa3c0f"
+}
+
+  
+
+    '

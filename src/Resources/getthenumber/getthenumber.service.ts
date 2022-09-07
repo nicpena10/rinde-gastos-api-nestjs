@@ -1,11 +1,12 @@
 import { Injectable } from '@nestjs/common';
+import { GetTheNumberDTO } from './getthenumber.dto';
 
 @Injectable()
 export class GetthenumberService {
-    getTheNumber(first:number,second:number){
-       let contatena:string;
-       contatena= numcancatena(first,second);
-        return  `El producto concatenado de la multiplicacion de ${first} y ${second} es  ${contatena}` ;
+    getTheNumber(Getthenumber_ARR:GetTheNumberDTO){
+        let contatena:string;
+       contatena= numcancatena(Getthenumber_ARR.first,Getthenumber_ARR.second);
+        return  `El producto concatenado de la multiplicacion de ${Getthenumber_ARR.first} y ${Getthenumber_ARR.second} es  ${contatena}` ;
         //return  num.first;
     }
 }
